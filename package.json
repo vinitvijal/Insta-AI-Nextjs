@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^1.1.9",
     "@nanostores/react": "github:ai/react",
     "@radix-ui/react-scroll-area": "^1.2.3",
     "@radix-ui/react-slot": "^1.1.2",
