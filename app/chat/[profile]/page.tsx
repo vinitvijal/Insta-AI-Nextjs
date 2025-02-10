@@ -1,7 +1,7 @@
 import { ChatInterface } from "@/components/chat-interface"
 
-export default function ChatPage({ params }: { params: { profile: string } }) {
-  const decodedProfile = decodeURIComponent(params.profile)
+export default async function ChatPage({ params }: { params: Promise<{ profile: string }> }) {
+  const decodedProfile = await (params as Promise<{ profile: string }>).then((p) => decodeURIComponent(p.profile))
 
   return (
     <div className="flex flex-col h-screen bg-gray-900">
